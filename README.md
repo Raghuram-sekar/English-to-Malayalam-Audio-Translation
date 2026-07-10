@@ -1,6 +1,11 @@
 # English-to-Malayalam Audio Translation and Synthesis
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![gTTS](https://img.shields.io/badge/gTTS-green?style=for-the-badge)
 
+## Overview
 A Python speech processing utility that transcribes incoming English audio, translates the text to Malayalam, and synthesizes it back into audio speech using gTTS and translation APIs.
+
+## System Architecture
+```\n[Relational Database / Core API Architecture]\n```
 
 ## Features
 - Speech transcription using SpeechRecognition and PyAudio.
@@ -8,11 +13,9 @@ A Python speech processing utility that transcribes incoming English audio, tran
 - Text-to-speech synthesis using gTTS.
 
 ## Tech Stack
-- Python
-- SpeechRecognition
-- gTTS
-- Google Translate API
-- PyAudio
+- Python speech processing framework
+- gTTS (Google Text-to-Speech) API
+- SpeechRecognition for audio transcription
 
 ## Getting Started
 To configure and run the project locally, clone the repository and execute the setup instructions:
