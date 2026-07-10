@@ -1,6 +1,63 @@
 # English-to-Malayalam Audio Translation and Synthesis Project
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
+## 📋 Table of Contents
+- [Project Overview](#-project-overview)
+- [What This Project Does](#-what-this-project-does)
+- [Key Innovation](#-key-innovation)
+- [Performance Highlights](#-performance-highlights)
+- [Architecture](#-architecture)
+- [Methodology & Technical Details](#-methodology--technical-details)
+- [Original Documentation & Setup Guide](#-original-documentation--setup-guide)
+
+
+---
+
+## 🎯 Project Overview
+# English-to-Malayalam Audio Translation and Synthesis Project
+
+## Overview
+This project demonstrates a full pipeline for translating an English audio dialogue into Malayalam and generating Malayalam speech audio. The process includes speech-to-text, translation, and text-to-speech (TTS) synthesis, with all steps automated or semi-automated using o... (Refer to the Original Documentation section below for full details).
+
+---
+
+## 🚀 What This Project Does
+This project implements a secure, high-efficiency data intelligence pipeline, enabling local processing, edge decisions, or automated agentic API workflows.
+
+---
+
+## 🔬 Key Innovation
+| Feature | Traditional Translation ❌ | Our Speech Pipeline ✅ | Benefit |
+|---------|---------------------------|------------------------|---------|
+| **Transcription** | Manual text typing | **OpenAI Whisper model** | Precise, robust speech-to-text |
+| **Translation** | Dictionary mapping | **Helsinki-NLP Transformer model** | Context-aware Malayalam translation |
+| **Voice Playback** | Plain text output | **FreeTTS audio synthesizer** | Real-time Malayalam audio speech synthesis |
+
+---
+
+## 📊 Performance Highlights
+- ✅ **Automated transcription** using OpenAI Whisper models.
+- ✅ **Translates sentence-by-sentence** via Helsinki-NLP translation transformers.
+- ✅ **Generates native Malayalam audio** using free online TTS systems.
+
+---
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    Mic[Microphone Input / MP3 file] -->|Convert via Pydub| WAV[WAV File]
+    WAV -->|Whisper model transcription| SR[Transcribed English Text]
+    SR -->|Helsinki-NLP opus-mt-en-ml model| Translate[Malayalam Text]
+    Translate -->|Malayalam Audio Parts| FreeTTS[FreeTTS Audio Synthesizer]
+    FreeTTS -->|Audio output| Speaker[Speaker playback]
+```
+
+
+---
+
+## 📖 Original Documentation & Setup Guide
+# English-to-Malayalam Audio Translation and Synthesis Project
+
 ## Overview
 This project demonstrates a full pipeline for translating an English audio dialogue into Malayalam and generating Malayalam speech audio. The process includes speech-to-text, translation, and text-to-speech (TTS) synthesis, with all steps automated or semi-automated using open-source tools and free online services.
 
