@@ -7,6 +7,8 @@
 - [Key Innovation](#🔬-key-innovation)
 - [Performance Highlights](#📊-performance-highlights)
 - [Architecture](#🏗️-architecture)
+- [Methodology & Technical Details](#⚙️-methodology--technical-details)
+- [Project Structure](#📂-project-structure)
 - [Tech Stack](#🧱-tech-stack)
 - [Quick Start](#💻-quick-start)
 
@@ -39,7 +41,32 @@ A Python speech processing utility that transcribes incoming English audio, tran
 ---
 
 ## 🏗️ Architecture
-```\n[Core Architectural Components & Datastore Framework]\n```
+```mermaid
+graph TD
+    Mic[Microphone Input] -->|Capture Audio| SR[SpeechRecognition Engine]
+    SR -->|Transcribed English Text| Translate[Google Translate API]
+    Translate -->|Malayalam Text| GTTS[gTTS Voice Synthesizer]
+    GTTS -->|Malayalam Audio Stream| Speaker[Speaker Playback]
+```
+
+---
+
+## ⚙️ Methodology & Technical Details
+### Automatic Speech Recognition (ASR)
+The script captures audio streams from the default microphone using PyAudio. The SpeechRecognition library captures speech segments and forwards them to Google's Speech-to-Text API, converting the audio to an English text string.
+
+### Text Translation and Synthesis
+The transcribed English text is sent to the Google Translate API, mapping it to Malayalam text. The output Malayalam text is then processed by gTTS (Google Text-to-Speech), which returns a temporary MP3 file containing the synthesized Malayalam speech. The script invokes local audio players to play back the Malayalam audio, completing the translation cycle under **2.5 seconds**.
+
+---
+
+## 📂 Project Structure
+```
+audio_translator/
+├── translate_to_malayalam.py    # Main script managing recording & speech API calls
+├── requirements.txt            # Package dependencies (gTTS, SpeechRecognition)
+└── README.md                   # This document
+```
 
 ---
 
